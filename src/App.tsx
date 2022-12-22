@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import { Home, About, Project } from './Components/export'
 

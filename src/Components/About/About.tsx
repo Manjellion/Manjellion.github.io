@@ -3,6 +3,7 @@ import React from 'react'
 function About() {
     return (
         <div>
+            <h1>About</h1>
             <p>I am currently in my final year and studying Computer Science at University of East London</p>
             <p>Outside of tech, I enjoy reading and watching fiction</p>
             <p>Here are some of the technologies I work with</p>
