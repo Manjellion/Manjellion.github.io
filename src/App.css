@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .App {
-  padding: 2rem;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  scroll-behavior: smooth;
   font-family: 'Montserrat', sans-serif;
 }

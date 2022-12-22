@@ -1,4 +1,6 @@
 import React from 'react'
+import '../Style/style.css'
+import { AiFillGithub, AiOutlineLaptop } from 'react-icons/ai'
 
 type cardProps = {
     header: string;
@@ -10,10 +12,20 @@ type cardProps = {
 
 function Card({ header, info, stack, websiteURL, gitHubURL}: cardProps) {
     return (
-        <div>
-            <div>
-                <p>{websiteURL}</p>
-                <p>{gitHubURL}</p>
+        <div className='card-container'>
+            <div className='card-link-section'>
+                <a href={websiteURL} target="_blank">
+                    <AiOutlineLaptop 
+                        color='white'
+                        size={26}
+                    />
+                </a>
+                <a href={gitHubURL} target="_blank">
+                    <AiFillGithub 
+                        color='white'
+                        size={26}
+                    />
+                </a>
             </div>
             <h2>{header}</h2>
             <p>{info}</p>

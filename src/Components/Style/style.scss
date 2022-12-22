@@ -1,12 +1,13 @@
 $orange-bright: #ff9f29;
+$green-dark: #1a4d2e;
 $clear: #fff;
 
 @mixin flexCenter {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 5rem 15rem;
-    min-height: 100vh;
+    padding: 7.5rem 15rem;
+    min-height: 50vh;
 }
 
 .header_container {
@@ -27,7 +28,53 @@ $clear: #fff;
         &:hover {
             transition: .5s;
             background-color: $clear;
+            border: 1px solid $clear;
         }
     }
+}
 
+.about-container {
+    @include flexCenter();
+
+    p {
+        margin: 2px 0;
+    }
+    
+    .about-skill-section {
+        display: flex;
+        padding-top: 2.5rem;
+
+        li {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.project-container {
+    @include flexCenter();
+
+    .project-card-row1 {
+        display: flex;
+    }    
+    .project-card-row2 {
+        
+    }
+}
+
+.card-container {
+    background-color: $green-dark;
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 25%;
+    height: 20rem;
+    border-radius: 1rem;
+
+    .card-link-section {
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+            margin-left: 1rem;
+        }
+    }
 }
