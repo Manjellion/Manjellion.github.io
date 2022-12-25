@@ -1,3 +1,5 @@
 export { default as Home } from './Home/Header'
 export { default as About } from './About/About'
+export { default as Pokemon } from './Pokemon/Pokemon'
 export { default as Project } from './Projects/Projects'
+export { default as Footer } from './Footer/Footer'

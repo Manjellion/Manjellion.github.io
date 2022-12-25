@@ -1,6 +1,7 @@
 import React from 'react'
-import Card from './Card'
+import Card from './Cards'
 import '../Style/style.css'
+import { Button } from '@mui/material'
 
 function Projects() {
 
@@ -18,33 +19,42 @@ function Projects() {
     return (
         <div className='project-container'>
             <h1>Projects</h1>
-            <div className='project-card-section'>
+            <div className='project-card-row1'>
                 {
                     row1Data.map((data, key) => (
-                        <Card 
-                            key={key}
-                            header={data.title}
-                            info={data.desc}
-                            stack={data.tech}
-                            websiteURL={data.webLink}
-                            gitHubURL={data.gitHubLink}
-                        />
+                        <div className='project-card-section'>
+                            <Card 
+                                key={key}
+                                header={data.title}
+                                info={data.desc}
+                                stack={data.tech}
+                                websiteURL={data.webLink}
+                                gitHubURL={data.gitHubLink}
+                            />
+                        </div>
                     ))
                 }
             </div>
-            <div>
+            <div className='project-card-row2'>
                 {
                     row2Data.map((data, key) => (
-                        <Card 
-                            key={key}
-                            header={data.title}
-                            info={data.desc}
-                            stack={data.tech}
-                            websiteURL={data.webLink}
-                            gitHubURL={data.gitHubLink}
-                        />
+                        <div className='project-card-section'>
+                            <Card 
+                                key={key}
+                                header={data.title}
+                                info={data.desc}
+                                stack={data.tech}
+                                websiteURL={data.webLink}
+                                gitHubURL={data.gitHubLink}
+                            />
+                        </div>
                     ))
                 }
+            </div>
+            <div className='project-button'>
+                <Button variant='outlined' href='https://github.com/Manjellion?tab=repositories' target='_blank' color='secondary'>
+                    View More Here
+                </Button>
             </div>
         </div>
     )
