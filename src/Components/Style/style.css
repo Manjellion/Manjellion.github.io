@@ -49,6 +49,13 @@
   margin-bottom: 10px;
 }
 
+.pokemon-img-container {
+  text-align: center;
+}
+.pokemon-img-container button {
+  padding: 0.5rem 1rem;
+}
+
 .project-container {
   display: flex;
   flex-direction: column;

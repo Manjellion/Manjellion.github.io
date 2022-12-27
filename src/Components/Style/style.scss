@@ -61,6 +61,14 @@ $clear: #fff;
     }
 }
 
+.pokemon-img-container {
+    text-align: center;
+
+    button {
+        padding: .5rem 1rem;
+    }
+}
+
 .project-container {
     @include flexCenter();
 

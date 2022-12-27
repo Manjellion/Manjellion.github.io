@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import { List, ListItemButton, ListItemText } from '@mui/material';
+import React, { useEffect, useState } from 'react'
+import Capitalized from '../../Service/capsitalized';
 
 function Pokemon() {
 
@@ -9,23 +11,29 @@ function Pokemon() {
 
       const getPokemon = async () => {
         try {
-          fetch(`https://pokeapi.co/api/v2/pokemon/${num}`)
+          await fetch(`https://pokeapi.co/api/v2/pokemon/${num}`)
           .then((response) => response.json())
           .then((data) => {
-            console.log(data.sprites.front_default)
-            console.log(num);
             const dataImg = data.sprites.front_default;
+            const dataName = data.name
             setPokemonImg(dataImg);
+            setPokemonName(dataName);
           });
         } catch(err) {
           console.error('Error: ', err);
         }
       }      
 
+      const capsPokemonName = Capitalized(pokemonName);
+
   return (
-    <div className='pokemon-img-section'>
+    <div className='pokemon-img-container'>
+      <h1>Which Pokemon you got today?</h1>
         <button onClick={() => getPokemon()}>Click Me</button>
-        <img src={pokemonImg} />
+        <div className='prokemon-img-section'>
+          <img src={pokemonImg} />
+          <p>{capsPokemonName}</p>
+        </div>
     </div>
   )
 }
