@@ -1,9 +1,10 @@
 import './App.css';
-import { Home, About, Project, Pokemon, Footer } from './Components/export'
+import { Home, About, Project, Pokemon, Footer, Nav } from './Components/export'
 
 function App() {
   return (
     <div className="App">
+      <Nav />
       <Home />
       <About />
       <Pokemon />

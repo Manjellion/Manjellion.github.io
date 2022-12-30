@@ -17,7 +17,7 @@ function Projects() {
     ]
 
     return (
-        <div className='project-container'>
+        <div className='project-container' id='projects'>
             <h1>Projects</h1>
             <div className='project-card-row1'>
                 {

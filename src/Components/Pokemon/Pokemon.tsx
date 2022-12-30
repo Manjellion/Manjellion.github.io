@@ -1,5 +1,4 @@
-import { List, ListItemButton, ListItemText } from '@mui/material';
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Capitalized from '../../Service/capsitalized';
 
 function Pokemon() {

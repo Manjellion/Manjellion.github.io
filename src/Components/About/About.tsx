@@ -3,7 +3,7 @@ import '../Style/style.css'
 
 function About() {
     return (
-        <div className='about-container'>
+        <div className='about-container' id='about'>
             <h1>About</h1>
             <p>I am currently in my final year and studying Computer Science at University of East London</p>
             <p>I enjoy working on website espescially frontend as its more of the creative side</p>
