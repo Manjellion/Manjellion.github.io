@@ -110,31 +110,25 @@ $clear: #fff;
     position: fixed;
     display: flex;
     justify-content: flex-end;
-    width: 99vw;
+    width: 99.9vw;
     height: 100vh;
     align-items: center;
+    text-align: right;
 
     ul {
         list-style: none;
         font-weight: bold;
+        padding-right: 1rem;
 
         li {
             margin-top: 1rem;
 
             a {
                 background: transparent;
-                padding: 0 1rem;
                 color: #fff;
                 text-decoration: none !important;
                 transition: .25s ease-in;
                 cursor: pointer;
-                &:hover {
-                    background-color: #fff;
-                    color: #000;
-                    font-size: 24px;
-                    padding: .5rem 1rem;
-                    transition: .25s ease-out;
-                }
             }
         }
     }
