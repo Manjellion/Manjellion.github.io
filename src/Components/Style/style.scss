@@ -2,6 +2,9 @@ $orange-bright: #ff9f29;
 $green-dark: #1a4d2e;
 $clear: #fff;
 
+// SCSS Variables to store breakpoints (Responsive Design) 
+$mobile-view: 400px;
+
 @mixin flexCenter {
     display: flex;
     flex-direction: column;
@@ -10,126 +13,225 @@ $clear: #fff;
     min-height: 50vh;
 }
 
-.header_container {
-    @include flexCenter();
-
-    h1 {
-        font-size: 80px;
-    }
-
-    h2, p {
-        font-size: 17.5px;
-    }
-
-    button {
-        padding: 10px 30px;
-        cursor: pointer;
-        border: 1px solid $orange-bright;
-        border-radius: 4px;
-        background-color: $orange-bright;
-        transition: .5s;
-
-        &:hover {
-            transition: .5s;
-            background-color: $clear;
-            border: 1px solid $clear;
-        }
-    }
-}
-
-.about-container {
-    @include flexCenter();
-
-    h1 {
-        font-size: 50px;
-    }
-
-    p {
-        margin: 2px 0;
-        font-size: 17.5px;
-    }
-    
-    .about-skill-section {
-        display: flex;
-        justify-content: space-around;
-        padding-top: 2.5rem;
-        width: 100%;
-
-        li {
-            margin-bottom: 10px;
-        }
-    }
-}
-
-.pokemon-img-container {
-    text-align: center;
-
-    button {
-        padding: .5rem 1rem;
-    }
-}
-
-.project-container {
-    @include flexCenter();
-
-    h1 {
-        font-size: 50px;
-    }
-
-    .project-card-row1 {
-        display: flex;
-        justify-content: space-between;
-    }    
-    .project-card-row2 {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .project-card-section {
-        padding: 1rem;
-        margin: 1rem 0;
-        height: 20rem;
-
-        &:hover {
-            transform: 1.2;
-        }
-    }
-
-    .project-button {
-        margin: auto;
-    }
-}
-
-.footer-container {
-    text-align: center;
-    padding: 1rem 0;
-    margin: 0 auto;
-}
-
-.nav-container {
-    position: fixed;
-    display: flex;
-    justify-content: flex-end;
-    width: 99.9vw;
+@mixin flexCenterMobile {
+    padding: 1rem 2.5rem;
     height: 100vh;
-    align-items: center;
-    text-align: right;
+    h1 {
+        font-size: 60px;
+    }
+}
 
-    ul {
-        list-style: none;
-        font-weight: bold;
-        padding-right: 1rem;
+* {
+    scroll-behavior: smooth;
+}
 
-        li {
-            margin-top: 1rem;
 
-            a {
-                background: transparent;
-                color: #fff;
-                text-decoration: none !important;
-                transition: .25s ease-in;
-                cursor: pointer;
+    .header_container {
+        @include flexCenter();
+    
+        h1 {
+            font-size: 80px;
+        }
+    
+        h2, p {
+            font-size: 17.5px;
+        }
+    
+        .header_button {
+            padding: 10px 30px;
+            cursor: pointer;
+            color: #000;
+            border: 1px solid $orange-bright;
+            border-radius: 4px;
+            background-color: $orange-bright;
+            transition: .5s;
+    
+            &:hover {
+                transition: .5s;
+                background-color: $clear;
+                border: 1px solid $clear;
             }
         }
     }
+    
+    .about-container {
+        @include flexCenter();
+    
+        p {
+            margin: 2px 0;
+            font-size: 17.5px;
+        }
+        
+        .about-skill-section {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 2.5rem;
+            width: 100%;
+    
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    
+    .pokemon-img-container {
+        text-align: center;
+    
+        button {
+            padding: .5rem 1rem;
+        }
+    }
+    
+    .project-container {
+        @include flexCenter();
+    
+        h1 {
+            font-size: 50px;
+        }
+    
+        .project-card-row1 {
+            display: flex;
+            justify-content: space-between;
+        }    
+        .project-card-row2 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        .project-card-section {
+            padding: 1rem;
+            margin: 1rem 0;
+            height: 20rem;
+    
+            &:hover {
+                transform: 1.2;
+            }
+        }
+    
+        .project-button-container {
+            margin: auto;
+
+            .project-button {
+                color: $clear;
+            }
+        }
+    }
+    
+    .footer-container {
+        text-align: center;
+        padding: 1rem 0;
+        margin: 0 auto;
+    }
+    
+    .nav-container {
+        position: fixed;
+        display: flex;
+        justify-content: flex-end;
+        width: 99.9vw;
+        height: 100vh;
+        align-items: center;
+        text-align: right;
+    
+        ul {
+            list-style: none;
+            font-weight: bold;
+            padding-right: 1rem;
+    
+            li {
+                margin-top: 1rem;
+    
+                a {
+                    background: transparent;
+                    color: #fff;
+                    text-decoration: none !important;
+                    transition: .25s ease-in;
+                    cursor: pointer;
+                }
+            }
+        }
+    }   
+
+@media (max-width: 425px) {
+    .nav-container {
+        display: none
+    }
+    
+    .header_container {
+        @include flexCenterMobile();
+    
+        h2 {
+            font-size: 32px;
+        }
+    
+        p {
+            font-size: 20px;
+        }
+        
+        .header_button {
+            padding: 10px 30px;
+            cursor: pointer;
+            color: #000;
+            border: 1px solid $orange-bright;
+            border-radius: 4px;
+            background-color: $orange-bright;
+            transition: .5s;
+    
+            &:hover {
+                transition: .5s;
+                background-color: $clear;
+                border: 1px solid $clear;
+            }
+        }
+    }
+    
+    .about-container {
+        @include flexCenterMobile();
+    
+        .about-skill-section {
+            display: flex;
+        }
+    }
+    
+    .pokemon-img-container {
+        height: 50vh;
+        
+        h1 {
+            font-size: 32px;
+        }
+        text-align: center;
+    }
+    
+    .project-container {
+        padding: 0 2.5rem;
+    
+        .project-card-section {
+            padding: 0;
+        }
+        .project-card-row1 {
+            display: block;
+        }
+
+        .project-card-row2 {
+            display: block;
+        }
+    
+        .project-button-container {
+            padding-top: 1rem;
+            text-align: center;
+            
+            .project-button {
+                color: $clear;
+            }
+        }
+    }
+    
+    .footer-container {
+        padding-top: 5rem;
+        padding-bottom: 1rem;
+        p {
+            color: $clear;
+            text-align: center;
+        }
+    }
 }
+

@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import { useState } from 'react'
 import Capitalized from '../../Service/capsitalized';
 
@@ -28,7 +29,7 @@ function Pokemon() {
   return (
     <div className='pokemon-img-container'>
       <h1>Which Pokemon you got today?</h1>
-        <button onClick={() => getPokemon()}>Click Me</button>
+        <Button onClick={() => getPokemon()}>Click Me</Button>
         <div className='prokemon-img-section'>
           <img src={pokemonImg} />
           <p>{capsPokemonName}</p>

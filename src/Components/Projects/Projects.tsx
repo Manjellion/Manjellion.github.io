@@ -51,8 +51,8 @@ function Projects() {
                     ))
                 }
             </div>
-            <div className='project-button'>
-                <Button variant='outlined' href='https://github.com/Manjellion?tab=repositories' target='_blank' color='secondary'>
+            <div className='project-button-container'>
+                <Button className='project-button' variant='outlined' href='https://github.com/Manjellion?tab=repositories' target='_blank'>
                     View More Here
                 </Button>
             </div>
