@@ -151,7 +151,7 @@ $mobile-view: 400px;
         }
     }   
 
-@media (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 425px) {
     .nav-container {
         display: none
     }

@@ -9,8 +9,8 @@ function Nav() {
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <ul>
-              <li><a href=""><AiFillGithub size={24} /></a></li>
-              <li><a href=""><AiFillLinkedin size={24} /></a></li>
+              <li><a href="https://github.com/Manjellion" target="_blank"><AiFillGithub size={24} /></a></li>
+              <li><a href="https://www.linkedin.com/in/manjilghale/" target="_blank"><AiFillLinkedin size={24} /></a></li>
             </ul>
         </ul>
     </div>
